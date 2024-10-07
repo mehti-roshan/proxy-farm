@@ -17,13 +17,12 @@ for ((i=0; i<$count; i++)); do
 	cat <<EOF > $filename
 daemon
 nserver 8.8.8.8
+nscache 65536
+auth none
+allow all
 timeouts 1 5 30 60 180 15 60
 
 proxy -p$port -e192.168.0.$ip
-
-auth none
-allow all
-
 flush
 
 EOF

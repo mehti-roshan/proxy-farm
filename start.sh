@@ -21,14 +21,12 @@ for dongle in "${dongle_array[@]}"; do
 	sleep 2
 
 	echo "Starting 3proxy number $((i+1))"
-	# TODO start 3proxy with conf file
-	sudo 3proxy $conf_dir/3proxy$((idx+1)).conf
+	3proxy $conf_dir/3proxy$((idx+1)).conf
 
 	idx=$((idx+1))
 done
 
 echo "Starting HAProxy..."
-# TODO start HAProxy
 sudo haproxy -f $conf_dir/haproxy.cfg
 
 echo "Done"
