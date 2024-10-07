@@ -7,7 +7,8 @@ The scripts facilitate creating routing tables, configuring interfaces, generati
 The master proxy works via rotating requests with round robin throught the dongle proxies
 
 Things i have to do in the future:
- - Automatically create the routing tables if they do not exist or there aren't enough of them in the Linux rt_tables file
+ - Automatically create the routing tables if they do not exist or there aren't enough of them in the Linux rt_tables file ✓
+ - Add net.ipv4 forward enabling in scripts
 
 Things i might add in the future:
  - Containerize the application with a docker image
