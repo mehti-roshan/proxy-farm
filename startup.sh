@@ -1,13 +1,12 @@
 #!/bin/bash
 
-# TODO: Add a check to see if the parameter was supplied
-main_interface=$1
-interfaces=()
-
 if [ $# -ne 1 ]; then
 	echo "Usage: $0 <default wired interface name>"
 	exit 1
 fi
+
+main_interface=$1
+interfaces=()
 
 for iface in /sys/class/net/*; do
 	iface_name=$(basename $iface)

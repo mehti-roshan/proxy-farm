@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ $# -ne 1 ]; then
+	echo "Usage: $0 <number of config files>"
+	exit 1
+fi
+
 count=$1
 haproxy_port=3128
 port_start=8080
