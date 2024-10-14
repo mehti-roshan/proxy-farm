@@ -14,7 +14,6 @@ for iface in /sys/class/net/*; do
 		interfaces+=($iface_name)
 	fi
 done
-echo ${interfaces[@]}
 
 num_of_interfaces=${#interfaces[@]}
 num_of_dongles=$((num_of_interfaces-1))
@@ -26,7 +25,7 @@ for iface in ${interfaces[@]}; do
 	fi
 done
 
-# ./enable_ip_forward.sh
-# ./config_rt_tables.sh $num_of_dongles
-# ./generate_configs.sh $num_of_dongles
-# ./run_proxies.sh "${dongles[@]}"
+./enable_ip_forward.sh
+./config_rt_tables.sh $num_of_dongles
+./generate_configs.sh $num_of_dongles
+./run_proxies.sh "${dongles[@]}"
