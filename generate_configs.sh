@@ -10,8 +10,8 @@ haproxy_port=3128
 port_start=8080
 conf_dir="configs"
 
-# Go to the conf dir to create all the files in there
-cd $conf_dir
+# Create the config directory and cd to there to place all conf files
+mkdir -p $conf_dir && cd $conf_dir
 
 echo "Generating 3proxy configurations..."
 for ((i=0; i<$count; i++)); do
