@@ -12,4 +12,3 @@ Things i have to do in the future:
 
 Things i might add in the future:
  - Containerize the application with a docker image
- - Add scripts for automatic login to Dongle Web Interface
