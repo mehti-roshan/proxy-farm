@@ -1,6 +1,7 @@
 #!/bin/bash
 
 if [ $# -lt 1 ]; then
+	echo "$@"
 	echo "Usage: <dongle interface 1> <dongle interface 2> ..."
 	exit 1
 fi
