@@ -5,7 +5,10 @@ if [ $# -lt 1 ]; then
 	exit 1
 fi
 
-dongle_array=("$@")
+dongle_array=($@)
+echo ${dongle_array[@]}
+exit 1
+
 idx=0
 conf_dir="configs"
 
