@@ -47,7 +47,7 @@ defaults
 	timeout server 50000ms
 
 frontend proxy_front
-	bind localhost:3128
+	bind 0.0.0.0:3128
 	default_backend proxy_back
 
 backend proxy_back
