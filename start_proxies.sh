@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ $# -lt 1 ]; then
+	echo "Usage: <dongle interface 1> <dongle interface 2> ..."
+	exit 1
+fi
+
 dongle_array=("$@")
 idx=0
 conf_dir="configs"
