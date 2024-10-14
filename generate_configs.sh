@@ -27,7 +27,7 @@ auth none
 allow all
 timeouts 1 5 30 60 180 15 60
 
-proxy -p$port -e192.168.0.$ip -a1
+proxy -p$port -e192.168.0.$ip -a0
 flush
 
 EOF
