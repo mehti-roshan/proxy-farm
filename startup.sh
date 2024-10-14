@@ -26,6 +26,7 @@ for iface in ${interfaces[@]}; do
 	fi
 done
 
+./enable_ip_forward.sh
 ./config_rt_tables.sh $num_of_dongles
 ./generate_configs.sh $num_of_dongles
 ./start_proxies.sh ${dongles[@]}
