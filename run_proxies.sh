@@ -26,7 +26,7 @@ for dongle in "${dongle_array[@]}"; do
 	sleep 2
 
 	echo "Starting 3proxy number $((i+1))"
-	3proxy $conf_dir/3proxy$((idx+1)).conf
+	sudo 3proxy $conf_dir/3proxy$((idx+1)).conf
 
 	idx=$((idx+1))
 done
